@@ -3,16 +3,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
 
-public class ManagerMeasuresTargetController : BaseApiController
+public class ManagerMeasuresController : BaseApiController
 {
     private readonly IEmployeeService _employeeService;
 
-    public ManagerMeasuresTargetController(IEmployeeService employeeService)
+    public ManagerMeasuresController(IEmployeeService employeeService)
     {
         _employeeService = employeeService;
     }
 
-    [HttpGet("ManagerMeasuresTarget/{managerUserId}")]
+    [HttpGet("ManagerMeasures/{managerUserId}")]
     public async Task<IActionResult> GetManagerMeasuresTarget(int managerUserId)
     {
         var result = await _employeeService.GetEmployeeHierarchyWithMeasureTargetAsync(managerUserId);

@@ -7,4 +7,5 @@ public interface IEmployeeService
 {
     Task<UserHierarchyDto> GetEmployeeHierarchyAsync(int managerUserId);
     Task<UserHierarchyDto> GetEmployeeHierarchyWithMeasureTargetAsync(int managerUserId);
+    Task<UserHierarchyDto> GetEmployeeHierarchyWithMeasureTargetTotalsAsync(int managerUserId);
 }
