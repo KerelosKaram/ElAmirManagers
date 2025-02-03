@@ -1,0 +1,6 @@
+@ElAmirManagers_HostAddress = http://localhost:5195
+
+GET {{ElAmirManagers_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
